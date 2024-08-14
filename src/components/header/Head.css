@@ -1,0 +1,98 @@
+.header {
+  height: 77vh;
+  width: 100%;
+  margin: 0 auto;
+  background: url("/head4.jpg") no-repeat;
+  background-size: contain;
+  opacity: 10px;
+  position: relative;
+  border-radius: 15px;
+  background-size: cover;
+}
+.header-content {
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 15%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+h2 {
+  font-weight: 500;
+  font-size: 50px;
+}
+p {
+  font-weight: 300;
+  font-size: 20px;
+}
+#headbutton {
+  border: none;
+  font-size: 22px;
+  background-color: #fcca32;
+  font-weight: 400;
+  max-width: fit-content;
+  padding: 8px 20px;
+  align-self: left;
+  border-radius: 50px;
+}
+
+@media(max-width:948px){
+  .header{
+    height: 38vh;
+  }
+  .header-content{
+    max-width: 45%;
+  }
+  .header-content p{
+    font-size:10px;
+  }
+  .header-content h2{
+    font-weight: 200;
+    font-size: 25px;
+  }
+  
+}
+@media(max-width:750px){
+  
+  .header-content{
+    max-width: 55%;
+  }
+  .header-content p{
+    display: none;
+  }
+  .header-content h2{
+   
+      font-weight: 300;
+      font-size: 30px;
+    
+  }
+  #headbutton {
+    padding: 5px 16px;
+        font-size: 16px;
+  }
+  
+}
+@media(max-width:650px){
+  
+  .header-content{
+    max-width: 55%;
+  }
+  .header-content p{
+    display: none;
+  }
+  .header-content h2{
+   
+      font-weight: 300;
+      font-size: 20px;
+    
+  }
+  #headbutton {
+    padding: 4px 12px;
+        font-size: 13px;
+  }
+  
+}
