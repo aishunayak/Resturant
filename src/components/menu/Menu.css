@@ -1,0 +1,88 @@
+.mainMenu{
+text-align: center;
+padding: 10px;
+font-size: 25px  ;
+}
+#mainMenu-text{
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    
+}
+
+.food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+ 
+ 
+}
+
+.food-item {
+  margin-top: 10px;
+  flex: 1 1 calc(25% - 10px); /* This makes four items fit per row */
+  box-sizing: border-box;
+  text-align: center; 
+  padding-top: 20px;
+}
+
+.food-item img {
+  width: 250px;
+  height: 250px;
+  display: block;
+  border-radius: 125px; 
+  box-shadow:  rgba(248, 193, 29) 0px 30px 30px -20px;
+}
+.food-item img:hover {
+  transform: scale(1.05) translateY(-10px) ;
+  
+}
+
+.image-name {
+  margin-top: 8px;
+  font-size: 25px;
+  font-weight: 400;
+  color:#4a4946;
+}
+
+@media (max-width: 948px) {
+  .food {
+    flex: 1 1 calc(33.33% - 10px); 
+  }
+
+  .food-item {
+    font-size: 22px; 
+  }
+}
+
+
+@media (max-width: 750px) {
+  .food-item {
+    flex: 1 1 calc(50% - 10px); 
+  }
+
+  .image-name {
+    font-size: 20px; 
+  }
+  #mainMenu-text{
+    display: none;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .food {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .food-item {
+    flex: none; 
+  }
+
+  .image-name {
+    font-size: 17px; 
+  }
+}

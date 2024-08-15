@@ -5,26 +5,27 @@ import Home from './pages/home/Home';
 import Menu from './components/menu/Menu';
 import Register from './components/Register';
 import Practice from './components/Practice/Practice';
+import { useState } from 'react';
 
 
 const App = () => {
-  
+  const  [signin, setsignin] = useState(false);
   
   return (
     <>
-  
+     {signin?<Register/>:<></>}
     <div className='app'>
      
        {/* { <Register/> } */}
-     { <Navbar/> }
+     { <Navbar showSignin={setsignin}/> }
       
       <Routes>
        
-       {/* { <Route path='/' element={<Home/>}/> } */}
-       {<Route path='/practice' element={<Practice/>}/> }
+       { <Route path='/' element={<Home/>}/> }
+       {/* {<Route path='/practice' element={<Practice/>}/> } */}
        
       </Routes>
-      {/* {<Menu/> } */}
+      {<Menu/> }
     </div>
     </>
   );

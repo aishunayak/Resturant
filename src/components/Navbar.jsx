@@ -4,13 +4,12 @@ import './Navbar.css'
 
 
 
-function Navbar({setregister}) {
+function Navbar({showSignin}) {
   const [menu, setMenu] = useState("Menu");
  
-   
-  const overlay = ()=> {
-       setregister("true")
-  }
+   const handle =()=>{
+        showSignin(true);
+   }
   
   return (
     <div className='navbar'>
@@ -29,7 +28,7 @@ function Navbar({setregister}) {
           <div id="dot"></div>
         </div>
 
-        <button id='signin' onClick={overlay}>  Sign In  </button>
+        <button id='signin' onClick={handle}>  Sign In  </button>
 
 
       </div>
